@@ -3,8 +3,8 @@ const Button = ({label, iconUrl, bgColor, borderColor, textColor, fullWidth}) =>
     <button className=
               {
                 `flex justify-center
-                items-center gap-2 px-7 py-4 border font-montserrat
-                text-lg leading-none
+                items-center gap-2 px-7 py-4 max-sm:px-5 max-sm:py-3 border font-montserrat
+                text-lg max-sm:text-sm leading-none
                 active:bg-coral-red-500
                 ${bgColor
                   ? `${bgColor} ${borderColor} ${textColor}`
