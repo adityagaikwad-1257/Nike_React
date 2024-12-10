@@ -4,7 +4,7 @@ import { products } from "../constants"
 const PopularProducts = () => {
   return (
     <section id="products"
-      className="max-container max-sm:mt-12 scroll-mt-16">
+      className="max-container max-sm:mt-12 scroll-mt-16 max-lg:scroll-mt-8">
         <div className="flex flex-col justify-start gap-5">
           <h2 className="text-4xl font-palanquin font-bold">
             Our <span className="text-coral-red">Popular</span> Products
