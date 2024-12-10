@@ -10,7 +10,7 @@ const Nav = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (isMenuOpen){
+      if (isMenuOpen) {
         setisMenuOpen(!isMenuOpen);
       }
 
@@ -19,9 +19,9 @@ const Nav = () => {
       // If scrolling down, hide nav; if scrolling up, show nav
       if (currentScrollY > lastScrollY + 10) {
         setShowNav(false);
-      } else if (currentScrollY < (lastScrollY - 40)){
+      } else if (currentScrollY < lastScrollY - 40) {
         setShowNav(true);
-      }else if (currentScrollY === 0){
+      } else if (currentScrollY === 0) {
         setShowNav(true);
       }
 
@@ -44,14 +44,20 @@ const Nav = () => {
   return (
     <header
       className={`
-        bg-white shadow padding-x py-6 fixed z-20 w-full
+        bg-white shadow padding-x py-6 max-sm:py-4 fixed z-20 w-full
         transition-transform duration-300 ease-in-out
         ${showNav ? "translate-y-0" : "-translate-y-full"}
     `}
     >
       <nav className="max-container flex justify-between items-center">
         <a href="/">
-          <img src={headerLogo} alt="Logo" width={130} height={29} />
+          <img
+            className="max-sm:w-24 max-sm:h-auto"
+            src={headerLogo}
+            alt="Logo"
+            width={130}
+            height={29}
+          />
         </a>
         <div>
           <ul className="flex-1 flex justify-center items-center gap-12 max-lg:hidden">
@@ -60,9 +66,9 @@ const Nav = () => {
                 <a
                   href={item.href}
                   className="font-montserrat
-                                    leading-normal text-lg
-                                    border-2
-                                    text-black hover:border-coral-red py-3 px-6 rounded-full"
+                            leading-normal text-lg
+                            border-2
+                           text-black hover:border-coral-red py-3 px-6 rounded-full"
                 >
                   {item.label}
                 </a>
@@ -74,6 +80,7 @@ const Nav = () => {
         {!isMenuOpen && (
           <div className="hidden max-lg:block">
             <img
+              className="max-sm:w-4 max-sm:h-auto"
               src={hamburger}
               alt="Hamburger"
               width={25}
