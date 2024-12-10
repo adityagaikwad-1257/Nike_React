@@ -44,7 +44,7 @@ const Nav = () => {
   return (
     <header
       className={`
-        bg-white shadow padding-x py-6 max-sm:py-4 fixed z-20 w-full
+        bg-white shadow padding-x py-6 max-sm:py-5 fixed z-20 w-full
         transition-transform duration-300 ease-in-out
         ${showNav ? "translate-y-0" : "-translate-y-full"}
     `}
@@ -52,7 +52,7 @@ const Nav = () => {
       <nav className="max-container flex justify-between items-center">
         <a href="/">
           <img
-            className="max-sm:w-24 max-sm:h-auto"
+            className="max-sm:w-24 max-sm:h-6"
             src={headerLogo}
             alt="Logo"
             width={130}
@@ -80,7 +80,7 @@ const Nav = () => {
         {!isMenuOpen && (
           <div className="hidden max-lg:block">
             <img
-              className="max-sm:w-4 max-sm:h-auto"
+              className="max-sm:w-4 max-sm:h-4"
               src={hamburger}
               alt="Hamburger"
               width={25}
@@ -93,6 +93,7 @@ const Nav = () => {
         {isMenuOpen && (
           <div className="hidden max-lg:block">
             <img
+              className="max-sm:w-4 max-sm:h-4"
               src={closeIcon}
               alt="close_icon"
               width={25}
